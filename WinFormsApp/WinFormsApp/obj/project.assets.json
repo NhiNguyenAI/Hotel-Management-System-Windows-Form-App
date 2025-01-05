@@ -1890,11 +1890,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Master_Dev\\Windows-Forms-in-.NET-6\\WinFormsApp\\WinFormsApp\\HotelManagementSystem.csproj",
-      "projectName": "HotelManagementSystem",
-      "projectPath": "C:\\Users\\User\\Master_Dev\\Windows-Forms-in-.NET-6\\WinFormsApp\\WinFormsApp\\HotelManagementSystem.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Master_Dev\\Hotel-Management-System-Windows-Form-App\\WinFormsApp\\WinFormsApp\\WinFormsApp.csproj",
+      "projectName": "WinFormsApp",
+      "projectPath": "C:\\Users\\User\\Master_Dev\\Hotel-Management-System-Windows-Form-App\\WinFormsApp\\WinFormsApp\\WinFormsApp.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Master_Dev\\Windows-Forms-in-.NET-6\\WinFormsApp\\WinFormsApp\\obj\\",
+      "outputPath": "C:\\Users\\User\\Master_Dev\\Hotel-Management-System-Windows-Form-App\\WinFormsApp\\WinFormsApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

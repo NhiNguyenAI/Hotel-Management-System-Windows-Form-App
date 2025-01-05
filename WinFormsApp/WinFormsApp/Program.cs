@@ -1,3 +1,5 @@
+using HotelManagementSystem;
+
 namespace WinFormsApp
 {
     internal static class Program
@@ -9,8 +11,7 @@ namespace WinFormsApp
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-            Application.Run(new HotelManagementSystem.LogInForm());
-
+            Application.Run(new LogInForm());
         }
     }
 }

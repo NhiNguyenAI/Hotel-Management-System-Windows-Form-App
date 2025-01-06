@@ -150,6 +150,7 @@ namespace HotelManagementSystem
             // textBoxPassword
             // 
             textBoxPassword.Anchor = AnchorStyles.None;
+            textBoxPassword.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             textBoxPassword.Location = new Point(225, 144);
             textBoxPassword.Name = "textBoxPassword";
             textBoxPassword.Size = new Size(324, 30);
@@ -183,6 +184,7 @@ namespace HotelManagementSystem
             // textBoxUserName
             // 
             textBoxUserName.Anchor = AnchorStyles.None;
+            textBoxUserName.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             textBoxUserName.Location = new Point(221, 90);
             textBoxUserName.Name = "textBoxUserName";
             textBoxUserName.Size = new Size(324, 30);
@@ -246,7 +248,7 @@ namespace HotelManagementSystem
             Controls.Add(pictureBoxMinimizeWindows);
             Controls.Add(pictureBoxClose);
             Name = "LogInForm";
-            Text = "Login";
+            Text = "Hotel Management System | Login";
             ((System.ComponentModel.ISupportInitialize)pictureBoxClose).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxMinimizeWindows).EndInit();
             panel1.ResumeLayout(false);

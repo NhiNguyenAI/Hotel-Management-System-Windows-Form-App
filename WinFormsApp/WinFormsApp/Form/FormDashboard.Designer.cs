@@ -31,6 +31,7 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDashboard));
             panelSlide = new Panel();
+            pictureBoxDashboard = new PictureBox();
             buttonInformation = new Button();
             buttonContact = new Button();
             buttonSetting = new Button();
@@ -38,21 +39,27 @@
             buttonRoom = new Button();
             buttonClient = new Button();
             buttonDashboard = new Button();
+            buttonUser = new Button();
             labelTitelHotelManagementSystem = new Label();
             panel4 = new Panel();
+            pictureBox1 = new PictureBox();
             labelTitelOfMenu = new Label();
-            pictureBoxDashboard = new PictureBox();
             buttonLogOut = new Button();
             timer = new System.Windows.Forms.Timer(components);
             labelTimer = new Label();
+            panel1 = new Panel();
+            panelContainerDashboardForm = new Panel();
             panelSlide.SuspendLayout();
-            panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxDashboard).BeginInit();
+            panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panelSlide
             // 
             panelSlide.BackColor = SystemColors.ActiveCaption;
+            panelSlide.Controls.Add(pictureBoxDashboard);
             panelSlide.Controls.Add(buttonInformation);
             panelSlide.Controls.Add(buttonContact);
             panelSlide.Controls.Add(buttonSetting);
@@ -63,8 +70,18 @@
             panelSlide.Dock = DockStyle.Left;
             panelSlide.Location = new Point(0, 0);
             panelSlide.Name = "panelSlide";
-            panelSlide.Size = new Size(264, 720);
+            panelSlide.Size = new Size(264, 734);
             panelSlide.TabIndex = 1;
+            // 
+            // pictureBoxDashboard
+            // 
+            pictureBoxDashboard.Image = (Image)resources.GetObject("pictureBoxDashboard.Image");
+            pictureBoxDashboard.Location = new Point(3, 0);
+            pictureBoxDashboard.Name = "pictureBoxDashboard";
+            pictureBoxDashboard.Size = new Size(262, 69);
+            pictureBoxDashboard.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxDashboard.TabIndex = 3;
+            pictureBoxDashboard.TabStop = false;
             // 
             // buttonInformation
             // 
@@ -191,59 +208,79 @@
             buttonDashboard.UseVisualStyleBackColor = false;
             buttonDashboard.Click += buttonDashboard_Click;
             // 
+            // buttonUser
+            // 
+            buttonUser.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            buttonUser.BackColor = SystemColors.ActiveCaption;
+            buttonUser.FlatAppearance.BorderSize = 0;
+            buttonUser.FlatStyle = FlatStyle.Flat;
+            buttonUser.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonUser.ForeColor = SystemColors.Window;
+            buttonUser.ImageAlign = ContentAlignment.TopLeft;
+            buttonUser.Location = new Point(981, 8);
+            buttonUser.Name = "buttonUser";
+            buttonUser.Padding = new Padding(11, 0, 0, 0);
+            buttonUser.Size = new Size(218, 54);
+            buttonUser.TabIndex = 8;
+            buttonUser.Text = "User";
+            buttonUser.TextAlign = ContentAlignment.BottomLeft;
+            buttonUser.UseVisualStyleBackColor = false;
+            // 
             // labelTitelHotelManagementSystem
             // 
             labelTitelHotelManagementSystem.AutoSize = true;
             labelTitelHotelManagementSystem.BackColor = SystemColors.ActiveCaption;
             labelTitelHotelManagementSystem.Font = new Font("Century Gothic", 25.8000011F, FontStyle.Bold, GraphicsUnit.Point);
             labelTitelHotelManagementSystem.ForeColor = SystemColors.Window;
-            labelTitelHotelManagementSystem.Location = new Point(268, 9);
+            labelTitelHotelManagementSystem.Location = new Point(38, 9);
             labelTitelHotelManagementSystem.Name = "labelTitelHotelManagementSystem";
-            labelTitelHotelManagementSystem.Size = new Size(619, 51);
+            labelTitelHotelManagementSystem.Size = new Size(491, 41);
             labelTitelHotelManagementSystem.TabIndex = 0;
             labelTitelHotelManagementSystem.Text = "Hotel Management System: ";
             labelTitelHotelManagementSystem.TextAlign = ContentAlignment.TopCenter;
             // 
             // panel4
             // 
-            panel4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel4.BackColor = SystemColors.ActiveCaption;
+            panel4.Controls.Add(pictureBox1);
+            panel4.Controls.Add(buttonUser);
             panel4.Controls.Add(labelTitelOfMenu);
-            panel4.Controls.Add(pictureBoxDashboard);
             panel4.Controls.Add(labelTitelHotelManagementSystem);
             panel4.Controls.Add(buttonLogOut);
-            panel4.Location = new Point(2, 0);
+            panel4.Dock = DockStyle.Top;
+            panel4.Location = new Point(264, 0);
             panel4.Name = "panel4";
             panel4.Size = new Size(1364, 69);
             panel4.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(884, 1);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(91, 65);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 9;
+            pictureBox1.TabStop = false;
             // 
             // labelTitelOfMenu
             // 
             labelTitelOfMenu.AutoSize = true;
             labelTitelOfMenu.Font = new Font("Century Gothic", 25.8000011F, FontStyle.Bold, GraphicsUnit.Point);
             labelTitelOfMenu.ForeColor = SystemColors.Window;
-            labelTitelOfMenu.Location = new Point(872, 8);
+            labelTitelOfMenu.Location = new Point(526, 9);
             labelTitelOfMenu.Name = "labelTitelOfMenu";
-            labelTitelOfMenu.Size = new Size(226, 51);
+            labelTitelOfMenu.Size = new Size(178, 41);
             labelTitelOfMenu.TabIndex = 4;
             labelTitelOfMenu.Text = "Welcome";
-            // 
-            // pictureBoxDashboard
-            // 
-            pictureBoxDashboard.Image = (Image)resources.GetObject("pictureBoxDashboard.Image");
-            pictureBoxDashboard.Location = new Point(0, 0);
-            pictureBoxDashboard.Name = "pictureBoxDashboard";
-            pictureBoxDashboard.Size = new Size(262, 69);
-            pictureBoxDashboard.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBoxDashboard.TabIndex = 3;
-            pictureBoxDashboard.TabStop = false;
             // 
             // buttonLogOut
             // 
             buttonLogOut.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            buttonLogOut.BackColor = SystemColors.ActiveCaption;
+            buttonLogOut.BackColor = SystemColors.Highlight;
             buttonLogOut.CausesValidation = false;
-            buttonLogOut.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonLogOut.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             buttonLogOut.ForeColor = SystemColors.ButtonHighlight;
             buttonLogOut.Image = (Image)resources.GetObject("buttonLogOut.Image");
             buttonLogOut.ImageAlign = ContentAlignment.MiddleRight;
@@ -262,20 +299,38 @@
             // 
             // labelTimer
             // 
-            labelTimer.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             labelTimer.AutoSize = true;
-            labelTimer.Location = new Point(1273, 690);
+            labelTimer.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            labelTimer.Location = new Point(1279, 3);
             labelTimer.Name = "labelTimer";
-            labelTimer.Size = new Size(60, 21);
+            labelTimer.Size = new Size(57, 21);
             labelTimer.TabIndex = 3;
             labelTimer.Text = "label2";
             // 
+            // panel1
+            // 
+            panel1.Controls.Add(labelTimer);
+            panel1.Dock = DockStyle.Bottom;
+            panel1.Location = new Point(264, 701);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1364, 33);
+            panel1.TabIndex = 4;
+            // 
+            // panelContainerDashboardForm
+            // 
+            panelContainerDashboardForm.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            panelContainerDashboardForm.Location = new Point(264, 69);
+            panelContainerDashboardForm.Name = "panelContainerDashboardForm";
+            panelContainerDashboardForm.Size = new Size(1364, 632);
+            panelContainerDashboardForm.TabIndex = 5;
+            // 
             // FormDashboard
             // 
-            AutoScaleDimensions = new SizeF(10F, 21F);
+            AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1366, 720);
-            Controls.Add(labelTimer);
+            ClientSize = new Size(1628, 734);
+            Controls.Add(panelContainerDashboardForm);
+            Controls.Add(panel1);
             Controls.Add(panel4);
             Controls.Add(panelSlide);
             Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
@@ -288,11 +343,13 @@
             WindowState = FormWindowState.Maximized;
             Load += FormDashBoard_Load;
             panelSlide.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBoxDashboard).EndInit();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxDashboard).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -311,5 +368,9 @@
         private System.Windows.Forms.Timer timer;
         private Label labelTimer;
         private Label labelTitelOfMenu;
+        private Button buttonUser;
+        private Panel panel1;
+        private Panel panelContainerDashboardForm;
+        private PictureBox pictureBox1;
     }
 }

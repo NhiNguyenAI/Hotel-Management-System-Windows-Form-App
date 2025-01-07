@@ -72,7 +72,7 @@ namespace HotelManagementSystem
                     connection.Open();
 
                     // SQL query to validate login
-                    string query = "SELECT COUNT(*) FROM User_Table WHERE User_Name = @username AND User_Password = @password";
+                    string query = "SELECT * FROM User_Table WHERE UserName = @username AND UserPassword = @password";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
@@ -82,16 +82,39 @@ namespace HotelManagementSystem
 
                         // Execute the query and get the result
                         object result = command.ExecuteScalar();
-                        if (result != null && (int)result > 0)
+                        // Execute the query and handle the result
+                        using (SqlDataReader reader = command.ExecuteReader())
                         {
-                            // Show the Dashboard Form if login is successful
-                            FormDashboard fd = new FormDashboard();
-                            fd.Show();
-                            this.Hide(); // Hide the login form
-                        }
-                        else
-                        {
-                            MessageBox.Show("Invalid Username or Password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            if (reader.Read())
+                            {
+                                // Retrieve user's first and last name from the database
+                                string firstName = reader["FristName"].ToString();
+                                string lastName = reader["LastName"].ToString();
+                                string adress = reader["Adress"].ToString();
+                                string telefone = reader["Telefone"].ToString();
+                                string PersonalID = reader["UserID"].ToString();
+                                string Roll = reader["Roll"].ToString();
+                                string PostalCode = reader["PostalCode"].ToString();
+                                string City = reader["City"].ToString();
+
+
+                                // Show the Dashboard Form and pass the username
+                                FormDashboard fd = new FormDashboard();
+                                fd.firstName = $"{firstName}";
+                                fd.lastName = $"{lastName}";
+                                fd.adress = $"{adress}";
+                                fd.telefone = $"{telefone}";
+                                fd.PersonalID = $"{PersonalID}";
+                                fd.Roll = $"{Roll}";
+                                fd.PostalCode = $"{PostalCode}";
+                                fd.City = $"{City}";
+                                fd.Show();
+                                this.Hide(); // Hide the login form
+                            }
+                            else
+                            {
+                                MessageBox.Show("Invalid Username or Password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                     }
                 }

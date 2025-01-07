@@ -61,9 +61,10 @@ namespace HotelManagementSystem
             pictureBoxClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBoxClose.Cursor = Cursors.Hand;
             pictureBoxClose.Image = (Image)resources.GetObject("pictureBoxClose.Image");
-            pictureBoxClose.Location = new Point(1394, 26);
+            pictureBoxClose.Location = new Point(1220, 20);
+            pictureBoxClose.Margin = new Padding(3, 2, 3, 2);
             pictureBoxClose.Name = "pictureBoxClose";
-            pictureBoxClose.Size = new Size(35, 35);
+            pictureBoxClose.Size = new Size(31, 26);
             pictureBoxClose.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxClose.TabIndex = 0;
             pictureBoxClose.TabStop = false;
@@ -74,9 +75,10 @@ namespace HotelManagementSystem
             // 
             pictureBoxMinimizeWindows.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBoxMinimizeWindows.Image = (Image)resources.GetObject("pictureBoxMinimizeWindows.Image");
-            pictureBoxMinimizeWindows.Location = new Point(1353, 26);
+            pictureBoxMinimizeWindows.Location = new Point(1184, 20);
+            pictureBoxMinimizeWindows.Margin = new Padding(3, 2, 3, 2);
             pictureBoxMinimizeWindows.Name = "pictureBoxMinimizeWindows";
-            pictureBoxMinimizeWindows.Size = new Size(35, 35);
+            pictureBoxMinimizeWindows.Size = new Size(31, 26);
             pictureBoxMinimizeWindows.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxMinimizeWindows.TabIndex = 1;
             pictureBoxMinimizeWindows.TabStop = false;
@@ -87,18 +89,19 @@ namespace HotelManagementSystem
             // 
             panel1.Controls.Add(Copyright);
             panel1.Dock = DockStyle.Bottom;
-            panel1.Location = new Point(0, 546);
+            panel1.Location = new Point(0, 410);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1432, 70);
+            panel1.Size = new Size(1253, 52);
             panel1.TabIndex = 0;
             // 
             // Copyright
             // 
             Copyright.AutoSize = true;
             Copyright.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            Copyright.Location = new Point(3, 38);
+            Copyright.Location = new Point(3, 28);
             Copyright.Name = "Copyright";
-            Copyright.Size = new Size(455, 23);
+            Copyright.Size = new Size(371, 19);
             Copyright.TabIndex = 0;
             Copyright.Text = "Copyright © 2025. Allright Reserved. C# MODERN DESIGN";
             // 
@@ -114,9 +117,11 @@ namespace HotelManagementSystem
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(pictureBoxHidePassword);
             groupBox1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            groupBox1.Location = new Point(105, 120);
+            groupBox1.Location = new Point(92, 90);
+            groupBox1.Margin = new Padding(3, 2, 3, 2);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(691, 351);
+            groupBox1.Padding = new Padding(3, 2, 3, 2);
+            groupBox1.Size = new Size(605, 263);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Please Login First";
@@ -126,9 +131,10 @@ namespace HotelManagementSystem
             pictureBoxShowPassword.BorderStyle = BorderStyle.FixedSingle;
             pictureBoxShowPassword.Cursor = Cursors.Hand;
             pictureBoxShowPassword.Image = (Image)resources.GetObject("pictureBoxShowPassword.Image");
-            pictureBoxShowPassword.Location = new Point(523, 143);
+            pictureBoxShowPassword.Location = new Point(483, 110);
+            pictureBoxShowPassword.Margin = new Padding(3, 2, 3, 2);
             pictureBoxShowPassword.Name = "pictureBoxShowPassword";
-            pictureBoxShowPassword.Size = new Size(26, 30);
+            pictureBoxShowPassword.Size = new Size(23, 23);
             pictureBoxShowPassword.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxShowPassword.TabIndex = 6;
             pictureBoxShowPassword.TabStop = false;
@@ -141,9 +147,9 @@ namespace HotelManagementSystem
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = SystemColors.ActiveCaption;
-            label3.Location = new Point(225, 197);
+            label3.Location = new Point(197, 148);
             label3.Name = "label3";
-            label3.Size = new Size(161, 23);
+            label3.Size = new Size(136, 19);
             label3.TabIndex = 5;
             label3.Text = " Forgot Password ?";
             // 
@@ -151,9 +157,10 @@ namespace HotelManagementSystem
             // 
             textBoxPassword.Anchor = AnchorStyles.None;
             textBoxPassword.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            textBoxPassword.Location = new Point(225, 144);
+            textBoxPassword.Location = new Point(193, 107);
+            textBoxPassword.Margin = new Padding(3, 2, 3, 2);
             textBoxPassword.Name = "textBoxPassword";
-            textBoxPassword.Size = new Size(324, 30);
+            textBoxPassword.Size = new Size(284, 26);
             textBoxPassword.TabIndex = 0;
             textBoxPassword.UseSystemPasswordChar = true;
             // 
@@ -162,9 +169,9 @@ namespace HotelManagementSystem
             label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(118, 147);
+            label2.Location = new Point(103, 110);
             label2.Name = "label2";
-            label2.Size = new Size(90, 23);
+            label2.Size = new Size(77, 19);
             label2.TabIndex = 3;
             label2.Text = "Password:";
             // 
@@ -173,9 +180,10 @@ namespace HotelManagementSystem
             buttonLogIn.Anchor = AnchorStyles.None;
             buttonLogIn.BackColor = SystemColors.ActiveCaption;
             buttonLogIn.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonLogIn.Location = new Point(221, 256);
+            buttonLogIn.Location = new Point(193, 192);
+            buttonLogIn.Margin = new Padding(3, 2, 3, 2);
             buttonLogIn.Name = "buttonLogIn";
-            buttonLogIn.Size = new Size(328, 41);
+            buttonLogIn.Size = new Size(287, 31);
             buttonLogIn.TabIndex = 3;
             buttonLogIn.Text = "Log In";
             buttonLogIn.UseVisualStyleBackColor = false;
@@ -185,9 +193,10 @@ namespace HotelManagementSystem
             // 
             textBoxUserName.Anchor = AnchorStyles.None;
             textBoxUserName.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            textBoxUserName.Location = new Point(221, 90);
+            textBoxUserName.Location = new Point(193, 68);
+            textBoxUserName.Margin = new Padding(3, 2, 3, 2);
             textBoxUserName.Name = "textBoxUserName";
-            textBoxUserName.Size = new Size(324, 30);
+            textBoxUserName.Size = new Size(284, 26);
             textBoxUserName.TabIndex = 1;
             // 
             // label1
@@ -195,9 +204,9 @@ namespace HotelManagementSystem
             label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(114, 93);
+            label1.Location = new Point(100, 70);
             label1.Name = "label1";
-            label1.Size = new Size(99, 23);
+            label1.Size = new Size(84, 19);
             label1.TabIndex = 0;
             label1.Text = "Username: ";
             // 
@@ -205,10 +214,12 @@ namespace HotelManagementSystem
             // 
             pictureBoxHidePassword.BorderStyle = BorderStyle.FixedSingle;
             pictureBoxHidePassword.Cursor = Cursors.Hand;
+            pictureBoxHidePassword.ErrorImage = (Image)resources.GetObject("pictureBoxHidePassword.ErrorImage");
             pictureBoxHidePassword.Image = (Image)resources.GetObject("pictureBoxHidePassword.Image");
-            pictureBoxHidePassword.Location = new Point(515, 144);
+            pictureBoxHidePassword.Location = new Point(483, 110);
+            pictureBoxHidePassword.Margin = new Padding(3, 2, 3, 2);
             pictureBoxHidePassword.Name = "pictureBoxHidePassword";
-            pictureBoxHidePassword.Size = new Size(26, 30);
+            pictureBoxHidePassword.Size = new Size(23, 23);
             pictureBoxHidePassword.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxHidePassword.TabIndex = 7;
             pictureBoxHidePassword.TabStop = false;
@@ -218,9 +229,10 @@ namespace HotelManagementSystem
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(963, 131);
+            pictureBox1.Location = new Point(843, 98);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(291, 270);
+            pictureBox1.Size = new Size(255, 202);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
@@ -230,23 +242,24 @@ namespace HotelManagementSystem
             label4.Anchor = AnchorStyles.None;
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(891, 425);
+            label4.Location = new Point(780, 319);
             label4.Name = "label4";
-            label4.Size = new Size(434, 46);
+            label4.Size = new Size(344, 37);
             label4.TabIndex = 4;
             label4.Text = "Holtel Management System";
             // 
             // LogInForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1432, 616);
+            ClientSize = new Size(1253, 462);
             Controls.Add(label4);
             Controls.Add(pictureBox1);
             Controls.Add(groupBox1);
             Controls.Add(panel1);
             Controls.Add(pictureBoxMinimizeWindows);
             Controls.Add(pictureBoxClose);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "LogInForm";
             Text = "Hotel Management System | Login";
             ((System.ComponentModel.ISupportInitialize)pictureBoxClose).EndInit();

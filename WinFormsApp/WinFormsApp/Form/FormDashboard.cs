@@ -21,9 +21,9 @@ namespace HotelManagementSystemProject
         public string adress;
         public string telefone;
         public string PersonalID;
-        public string Roll ;
-        public string PostalCode ;
-        public string City ;
+        public string Roll;
+        public string PostalCode;
+        public string City;
 
         // To keep track of the currently active button
         private Button currentButton = null!;
@@ -37,9 +37,9 @@ namespace HotelManagementSystemProject
 
         private void ButtonLogOut_LinkedClick(object sender, EventArgs e)
         {
-            
+
             DialogResult result = MessageBox.Show("Are you want to log out?", "Log Out", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if(DialogResult.Yes == result)
+            if (DialogResult.Yes == result)
             {
                 timer.Stop();
                 this.Close();
@@ -151,6 +151,9 @@ namespace HotelManagementSystemProject
             buttonUser.Text = "User: " + firstName;
         }
 
-       
+        private void labelTitelOfMenu_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -3,6 +3,8 @@ using System.Data;
 using System.Windows.Forms;
 using HotelManagementSystemProject;
 using Microsoft.Data.SqlClient; // Use the library to connect to SQL Server
+using System.Xml;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace HotelManagementSystem
 {
@@ -59,11 +61,42 @@ namespace HotelManagementSystem
             pictureBoxHidePassword.Show();
         }
 
+        /*
+         * this function to find the connection with sql
+         */
+        private string LoadConfig()
+        {
+            try
+            {
+                // Path to the config.xml file
+                string configPath = AppDomain.CurrentDomain.BaseDirectory + "config.xml";
+
+
+                XmlDocument xmlDoc = new XmlDocument();
+                xmlDoc.Load(configPath);
+
+                // Extract the connection string from the XML
+                XmlNode connectionNode = xmlDoc.SelectSingleNode("//connectionString");
+                if (connectionNode != null)
+                {
+                    return connectionNode.InnerText;
+                }
+                else
+                {
+                    throw new Exception("Connection string not found in config.xml");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error reading config.xml: " + ex.Message);
+                throw; // Re-throw the exception to avoid proceeding with invalid data
+            }
+        }
+
         // Event triggered when clicking the login button
         private void buttonLogIn_Click(object sender, EventArgs e)
         {
-            // Database connection string
-            string connectionString = "Server=localhost;Database=Hotel_Management;Trusted_Connection=True;TrustServerCertificate=True;";
+            string connectionString = LoadConfig(); // Use the centralized method to get the connection string
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
